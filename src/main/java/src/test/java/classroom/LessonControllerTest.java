@@ -1,4 +1,4 @@
-package hello;
+package classroom;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +23,7 @@ MockMvc mvc;
 
 @Test
   public void testHomepage() throws Exception {
-    this.mvc.perform(get("/").accept(MediaType.TEXT_PLAIN))
+    this.mvc.perform(get("/books").accept(MediaType.TEXT_PLAIN))
       .andExpect(status().isOk())
       .andExpect(content().string("GET to index route"));
   }

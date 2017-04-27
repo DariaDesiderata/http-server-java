@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Books {
+public class Book {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
@@ -14,7 +14,7 @@ public class Books {
   private String url;
   private String author;
 
-  public Long setId(Long id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
@@ -22,7 +22,7 @@ public class Books {
     return id;
   }
 
-  public String setTitle(String title) {
+  public void setTitle(String title) {
     this.title = title;
   }
 
@@ -30,7 +30,7 @@ public class Books {
     return title;
   }
 
-  public String setUrl(String url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
@@ -38,7 +38,7 @@ public class Books {
     return url;
   }
 
-  public String setAuthor(String author) {
+  public void setAuthor(String author) {
     this.author = author;
   }
 
